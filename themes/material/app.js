@@ -145,7 +145,7 @@ function list_files(path,files){
                 });
             }
             var ext = p.split('.').pop();
-            if("|html|php|css|go|java|js|json|txt|sh|md|mp4|webm|avi|bmp|jpg|jpeg|png|gif|m4a|mp3|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|".indexOf(`|${ext.toLowerCase()}|`) >= 0){
+            if("|html|".indexOf(`|${ext.toLowerCase()}|`) >= 0){
 	            p += "?a=view";
 	            c += " view";
             }
@@ -191,15 +191,15 @@ function file(path){
 		return file_video(path);
 	}
 
-	if("|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|".indexOf(`|${ext}|`) >= 0){
+	if("|mpg|".indexOf(`|${ext}|`) >= 0){
 		return file_video(path);
 	}
 	
-	if("|mp3|wav|ogg|m4a|".indexOf(`|${ext}|`) >= 0){
+	if("|mp|".indexOf(`|${ext}|`) >= 0){
 		return file_audio(path);
 	}
 
-	if("|bmp|jpg|jpeg|png|gif|".indexOf(`|${ext}|`) >= 0){
+	if("|bm|".indexOf(`|${ext}|`) >= 0){
 		return file_image(path);
 	}
 }
