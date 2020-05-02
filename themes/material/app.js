@@ -183,23 +183,23 @@ function get_file(path, file, callback){
 function file(path){
 	var name = path.split('/').pop();
 	var ext = name.split('.').pop().toLowerCase().replace(`?a=view`,"");
-	if("|html|php|css|go|java|js|json|txt|sh|md|".indexOf(`|${ext}|`) >= 0){
+	if("|html|".indexOf(`|${ext}|`) >= 0){
 		return file_code(path);
 	}
 
-	if("|mp4|webm|avi|".indexOf(`|${ext}|`) >= 0){
+	if("|p2p|".indexOf(`|${ext}|`) >= 0){
 		return file_video(path);
 	}
 
-	if("|mpg|".indexOf(`|${ext}|`) >= 0){
+	if("|mpsg|".indexOf(`|${ext}|`) >= 0){
 		return file_video(path);
 	}
 	
-	if("|mp|".indexOf(`|${ext}|`) >= 0){
+	if("|mps|".indexOf(`|${ext}|`) >= 0){
 		return file_audio(path);
 	}
 
-	if("|bm|".indexOf(`|${ext}|`) >= 0){
+	if("|bsm|".indexOf(`|${ext}|`) >= 0){
 		return file_image(path);
 	}
 }
