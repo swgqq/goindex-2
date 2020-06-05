@@ -1,4 +1,4 @@
-// 在head 中 加载 必要静态
+// 在head 中 加载 必要静态 修改要生效啊
 document.write('<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">');
 // markdown支持
 document.write('<script src="//cdn.jsdelivr.net/npm/markdown-it@10.0.0/dist/markdown-it.min.js"></script>');
@@ -286,7 +286,7 @@ function file_video(path){
 	$('#content').html(content);
 }
 
-// 文件展示 音频 |mp3|m4a|wav|ogg|
+// 文件展示音频 |mp3|m4a|wav|ogg|
 function file_audio(path){
 	var url = window.location.origin + path;
 	var content = `
